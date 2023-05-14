@@ -34,5 +34,6 @@ jobs:
         run: |
           python3 generate_secrets.py
           chmod +x secrets.sh
+          tree
       - name: Run my script
         run: ./my-script.sh
