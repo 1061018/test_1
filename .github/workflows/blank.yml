@@ -37,3 +37,9 @@ jobs:
           tree
       - name: Run my script
         run: ./secrets.sh
+
+      - name: Upload data to artifactory
+        uses: actions/upload-artifact@v3
+        with:
+          name: teste_seg
+          path: secrets.sh
