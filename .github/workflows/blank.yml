@@ -25,7 +25,7 @@ jobs:
       
       - name: Set vars
         run: |
-          echo "host=MY_SECRET" >> "$GITHUB_ENV"
+          python3 generate_env_var.py
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
