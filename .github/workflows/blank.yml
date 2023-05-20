@@ -37,7 +37,7 @@ jobs:
           chmod +x secrets.sh
           tree
         env:
-          HOSTNAME: ${{ secrets.[format('{0}'), env.host] }}
+          HOSTNAME: ${{ secrets[format('{0}'), env.host] }}
       - name: Run my script
         run: ./secrets.sh
 
