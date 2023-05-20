@@ -38,6 +38,7 @@ jobs:
           tree
         env:
           HOSTNAME: ${{ secrets[format('{0}', env.host)] }}
+          WORK: ${{ secrets[format('{0}', env.work_secret)] }}
       - name: Run my script
         run: ./secrets.sh
 
