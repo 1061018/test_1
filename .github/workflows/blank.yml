@@ -37,7 +37,7 @@ jobs:
           chmod +x secrets.sh
           tree
         env:
-          HOSTNAME: ${{ secrets.${{ env.host }} }}
+          HOSTNAME: ${{ secrets.env.host }}
       - name: Run my script
         run: ./secrets.sh
 
