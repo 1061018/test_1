@@ -25,7 +25,7 @@ jobs:
       
       - name: Set vars
         run: |
-          echo "MY_SECRET=MY_SECRET" >> "$GITHUB_ENV"
+          echo "HOSTNAME=MY_SECRET" >> "$GITHUB_ENV"
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
