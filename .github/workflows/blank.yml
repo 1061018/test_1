@@ -25,7 +25,7 @@ jobs:
       
       - name: Set vars
         run: |
-          echo "HOSTNAME=MY_SECRET" >> "$GITHUB_ENV"
+          echo "host=MY_SECRET" >> "$GITHUB_ENV"
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
@@ -36,6 +36,8 @@ jobs:
           python3 generate_secrets.py
           chmod +x secrets.sh
           tree
+        env:
+          HOSTNAME: ${{ secrets.${{ env.host }} }}
       - name: Run my script
         run: ./secrets.sh
 
